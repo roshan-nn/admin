@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react'; 
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Admin from './Pages/Admin'
+import Adduser from './Pages/Adduser';
+import Adminroutes from './Adminroutes';
+import Login from './Pages/Login';
+import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className='flex justify-center items-center max-h-screen bg-blue-500'>
+    //   <h1 className='text-4xl text-white font-bold'>Hello tailwind css</h1>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/admin/*' element={<Adminroutes />} />
+          <Route path='/add' element={<Adduser />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/' element={<Home />}/>
+        </Routes>
+
+      </BrowserRouter>
+      </div>
+      
   );
+   
+  
 }
 
 export default App;
