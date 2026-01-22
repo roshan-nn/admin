@@ -12,7 +12,7 @@ const Home = () => {
     }
     
   return (
-    <div class="bg-orange-500 h-screen w-screen">
+    <div className="bg-orange-500 h-screen w-screen">
         <h1>Home</h1>
         <button onClick={login}>home button</button>
         <button onClick={Admin}>Admin button</button>
