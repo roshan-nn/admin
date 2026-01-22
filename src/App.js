@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react'; 
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Admin from './Pages/Admin'
-import Adduser from './Pages/Adduser';
+import Adduser from './Pages/Adduserform';
 import Adminroutes from './Adminroutes';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
